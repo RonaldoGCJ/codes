@@ -1,2 +1,23 @@
-Aqui cont�m comandos que podem ser usados no GIT
+Alguns termos, para facilitar o entendimento dos comandos:
 
+Commit --> No git, o commit salva as alterações realizadas nos arquivos no repositório local.
+Branch --> No git temos a branch master por padrão, que seria onde o código final é inserido. Quando queremos implementar novas funcionalidades no sistema sem alterar o conteúdo do projeto principal, podemos criar uma nova branch, onde podemos inserir o conteúdo novo e realizar os testes sem prejudicar o conteúdo da branch master.
+Merge --> Uni o conteúdo da branch, com outra branch
+
+Aqui contém comandos que podem ser usados no GIT.
+
+git clone (URL_REPOSITÓRIO) --> clona um repositório online para o local.
+git diff (ID_novo) (ID_antigo) --> Compara as mudanças de dois commits 
+git log --> mostra todos os commits que foram realizados
+git log --graph --oneline (BRANCH) --> Obter histórico completo dos commits
+git checkout (ID ou BRANCH) --> seleciona a branch a ser trabalhada ou a versão do commit a se utilizada.
+git add (ARQUIVO) --> Adiciona o arquivo para a área de preparo, antes do commit
+git reset (ARQUIVO) --> Tira o arquivo da área de preparo
+git commit --> Comita os arquivos, provavelmente, se o editor foi configurado no git o mesmo irá solicitar para inserir uma descrição do commit
+git commit -m "comentário" --> Commita com um comentário, que é inserido pelo usuário
+git merge (BRANCH_RECEBE_DADOS) (BRANCH) --> Junta os dados das branchs do projeto
+git show (ID_COMMIT) --> mostra as diferenças entre o commit e seu pai
+git pull origin (BRANCH) --> traz as mudanças feitas no repositório online para o local.
+git push origin (BRANCH) --> Envia os arquivos o repositório online.
+
+git config --global core.autocrlf true --> Comando usado no windows, quando ocorre o problema de conversão (LF para CRLF)
